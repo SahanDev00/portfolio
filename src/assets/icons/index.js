@@ -26,16 +26,26 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import Travel from './Travel.svg'
+import BTC from './BTC.svg'
+import holiday from './holiday.svg'
+import dataPic from './dataPic.svg'
+import weather from './weather.svg'
+
 
 export {
     css,
     express,
+    Travel,
     git,
     github,
     html,
     javascript,
+    dataPic,
+    holiday,
     mongodb,
     motion,
+    BTC,
     mui,
     nextjs,
     nodejs,
@@ -55,5 +65,6 @@ export {
     arrow,
     contact,
     soundon,
+    weather,
     soundoff
 }
