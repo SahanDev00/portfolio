@@ -158,7 +158,14 @@ export const projects = [
         iconUrl: weather,
         theme: 'btn-back-yellow',
         name: 'Whether App',
-        description: 'A simple wether application developed using an API.',
+        description: 'A simple weather application developed using an API.',
         link: 'https://simpleweatherappr.netlify.app',
+    },
+    {
+        iconUrl: weather,
+        theme: 'btn-back-green',
+        name: 'Data Finance',
+        description: 'A Front End prototype for a data analysis website.',
+        link: 'https://data-finance-frontend.netlify.app',
     }
 ];
