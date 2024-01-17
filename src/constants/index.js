@@ -157,7 +157,7 @@ export const projects = [
     {
         iconUrl: weather,
         theme: 'btn-back-yellow',
-        name: 'Whether App',
+        name: 'Weather App',
         description: 'A simple weather application developed using an API.',
         link: 'https://simpleweatherappr.netlify.app',
     },
