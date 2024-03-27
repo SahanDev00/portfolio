@@ -151,13 +151,6 @@ export const projects = [
         link: 'https://travellerwebapp.netlify.app',
     },
     {
-        iconUrl: BTC,
-        theme: 'btn-back-pink',
-        name: 'DeFi',
-        description: 'Developed a front-end web application for a real time cryptocurrency application with API.',
-        link: 'https://defiapplication.netlify.app',
-    },
-    {
         iconUrl: holiday,
         theme: 'btn-back-black',
         name: 'Holiday',
