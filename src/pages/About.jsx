@@ -32,8 +32,8 @@ const About = () => {
                 <h3 className='subhead-text'> Education </h3>
                 <div className='mt-5 flex flex-col gap-3 '>
                     <ul className='list-disc'>
-                        <li> Undergraduate in Software Engineering from Pearson London.</li>
-                        <li> Diploma in Information Technology from Pearson London. (2023) </li>
+                        <li> Undergraduate in Software Engineering from Pearson UK.</li>
+                        <li> Diploma in Information Technology from Pearson UK. (2023) </li>
                         <li> Diploma in English from Esoft Metro Campus. (2023) </li>
                     </ul>
                 </div>
