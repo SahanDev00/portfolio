@@ -158,13 +158,6 @@ export const projects = [
         link: 'https://holidaybooking1.netlify.app',
     },
     {
-        iconUrl: weather,
-        theme: 'btn-back-yellow',
-        name: 'Weather App',
-        description: 'A simple weather application developed using an API.',
-        link: 'https://simpleweatherappr.netlify.app',
-    },
-    {
         iconUrl: estate,
         theme: 'btn-back-green',
         name: 'Data Finance',
