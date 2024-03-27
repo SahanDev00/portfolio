@@ -17,19 +17,15 @@ import {
     BTC,
     weather,
     nodejs,
-    pricewise,
     holiday,
+    grave,
     react,
-    dataPic,
-    redux,
-    sass,
-    snapgram,
     Travel,
-    summiz,
+    food,
     tailwindcss,
-    threads,
     typescript
 } from "../assets/icons";
+
 
 export const skills = [
     {
@@ -134,6 +130,20 @@ export const socialLinks = [
 export const projects = [
     
     {
+        iconUrl: grave,
+        theme: 'btn-back-red',
+        name: 'Grave',
+        description: 'Fully Responsive Static Website for E-Commerce.',
+        link: 'https://gravestore.netlify.app/',
+    },
+    {
+        iconUrl: food,
+        theme: 'btn-back-yellow',
+        name: "PoP's",
+        description: 'A website for a restaurant made with React.js + Tailwind.css',
+        link: 'https://popsfoods.netlify.app',
+    },
+    {
         iconUrl: Travel,
         theme: 'btn-back-blue',
         name: 'Travel Guide App',
@@ -162,7 +172,7 @@ export const projects = [
         link: 'https://simpleweatherappr.netlify.app',
     },
     {
-        iconUrl: weather,
+        iconUrl: estate,
         theme: 'btn-back-green',
         name: 'Data Finance',
         description: 'A Front End prototype for a data analysis website.',
