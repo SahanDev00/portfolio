@@ -10,9 +10,9 @@ const Plane = ({isRotating, ...props}) => {
 
     useEffect(() => {
     if(isRotating){
-        actions['Take 001'].play();
+        actions['ArmatureAction.001'].play();
     }else {
-        actions['Take 001'].stop();
+        actions['ArmatureAction.001'].stop();
     }
 }, [actions, isRotating])
 

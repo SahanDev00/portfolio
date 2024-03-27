@@ -19,6 +19,7 @@ const Home = () => {
     const [currentStage, setCurrentStage] = useState(1);
     const [isRotating, setIsRotating] = useState(false);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+    const [planeLift, setPlaneLift] = useState(0);
 
     useEffect(() => {
         if(isPlayingMusic) {
@@ -47,14 +48,15 @@ const Home = () => {
      let screenScale, screenPosition;
 
      if(window.innerWidth < 768) {
-         screenScale = [1.5, 1.5, 1.5];
+         screenScale = [0.001, 0.001, 0.001];
          screenPosition = [0, -1.5, 0];
      }else {
-        screenScale = [3, 3, 3];
-        screenPosition = [0, -4, -4]
+        screenScale = [0.0019, 0.0019, 0.0019];
+        screenPosition = [1, -3.5, -4]
      }
      return [screenScale, screenPosition]
     }
+    
 
     const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
     const [planeScale, planePosition] = adjustPlaneForScreenSize();
@@ -84,7 +86,7 @@ const Home = () => {
                     isRotating={isRotating}
                     scale={planeScale}
                     position={planePosition}
-                    rotation={[0, 20, 0]}
+                    rotation={[0.1, 30, 0]}
                 />
             </Suspense>
             </Canvas>

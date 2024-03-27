@@ -1,20 +1,22 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
 import birdScene from '../assets/3d/bird.glb';
 
 const Bird = () => {
-
-    const {scene, animations} = useGLTF(birdScene);
+    const { scene, animations } = useGLTF(birdScene);
     const birdRef = useRef();
-    const {actions} = useAnimations(animations, birdRef);
+    const { actions } = useAnimations(animations, birdRef);
 
     useEffect(() => {
         actions['Take 001'].play();
-    },[]);
+    }, []);
 
-    useFrame(({clock, camera}) => {
-        birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2
+    const initialPosition = [-5, 2, 1];
+    const maxDistanceFromInitial = 50;
+
+    useFrame(({ clock, camera }) => {
+        birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
 
         if (birdRef.current.position.x > camera.position.x + 10) {
             birdRef.current.rotation.y = Math.PI;
@@ -22,20 +24,28 @@ const Bird = () => {
             birdRef.current.rotation.y = 0;
         }
 
-        if(birdRef.current.rotation.y === 0){
-            birdRef.current.position.x += 0.01;
-            birdRef.current.position.z -= 0.01;
+        if (birdRef.current.rotation.y === 0) {
+            birdRef.current.position.x += -0.01;
+            birdRef.current.position.z -= -0.01;
         } else {
-            birdRef.current.position.x -= 0.01;
-            birdRef.current.position.z += 0.01;
+            birdRef.current.position.x -= -0.01;
+            birdRef.current.position.z += -0.01;
         }
-    })
+
+        const distanceFromInitial = birdRef.current.position.distanceTo(initialPosition);
+        if (distanceFromInitial > maxDistanceFromInitial) {
+
+            const directionBack = initialPosition.clone().sub(birdRef.current.position).normalize();
+            const stepBack = directionBack.multiplyScalar(0.1); 
+            birdRef.current.position.add(stepBack);
+        }
+    });
 
     return (
-        <mesh position={[-5, 2, 1]} scale={[0.003, 0.003, 0.003]} ref={birdRef}>
-            <primitive object={scene}/>
+        <mesh position={initialPosition} scale={[1, 1, 1]} rotation={[0, 15, 0]} ref={birdRef}>
+            <primitive object={scene} />
         </mesh>
-    )
-}
+    );
+};
 
-export default Bird
+export default Bird;

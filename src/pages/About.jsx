@@ -19,8 +19,9 @@ const About = () => {
                     {skills.map((skill) => (
                         <div className='block-container w-20 h-20'>
                             <div className='btn-back rounded-xl'/>
-                            <div className='btn-front rounded-xl flex justify-center items-center'>
+                            <div className='btn-front rounded-xl flex flex-col justify-center items-center'>
                                 <img src={skill.imageUrl} alt={skill.name} className='w-1/2 h-1/2 object-contain' />
+                                <h1 className='text-xs text-blue-400 pt-2'>{skill.name}</h1>
                             </div>
                         </div>
                     ))}
@@ -31,8 +32,8 @@ const About = () => {
                 <h3 className='subhead-text'> Education </h3>
                 <div className='mt-5 flex flex-col gap-3 '>
                     <ul className='list-disc'>
-                        <li> Undergraduate in Software Engineering from Esoft Metro Campus.</li>
-                        <li> Diploma in Information Technology from Esoft Metro Campus. (2023) </li>
+                        <li> Undergraduate in Software Engineering from Pearson London.</li>
+                        <li> Diploma in Information Technology from Pearson London. (2023) </li>
                         <li> Diploma in English from Esoft Metro Campus. (2023) </li>
                     </ul>
                 </div>
