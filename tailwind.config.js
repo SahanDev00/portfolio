@@ -4,6 +4,7 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,8 +17,10 @@ module.exports = {
         },
         blue: {
           500: "#2b77e7"
-        }
-      },
+        },
+          lightModeColor: '#FFFFFF', // Example light mode color
+          darkModeColor: '#333333', // Example dark mode color
+        },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
         poppins: ['Poppins', "sans-serif"]

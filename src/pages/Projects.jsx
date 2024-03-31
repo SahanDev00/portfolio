@@ -6,8 +6,8 @@ import { projects } from '../constants'
 
 const Projects = () => {
     return (
-        <section className='max-container'>
-            <h1 className='head-text'>
+        <section className='max-container dark:bg-[#03001C]'>
+            <h1 className='head-text dark:text-white'>
                My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
             </h1>
 
@@ -25,7 +25,7 @@ const Projects = () => {
                         </div>
 
                         <div className='mt-5 flex flex-col'>
-                            <h4 className='text-2xl font-poppins font-semibold'>
+                            <h4 className='text-2xl font-poppins font-semibold dark:text-white'>
                                 {project.name}
                             </h4>
                             <p className='mt-2 text-slate-500'>
